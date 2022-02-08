@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <div>
+      <b-card class="mb-2" title="Card Title" no-body>
+        <b-card-header header-tag="nav">
+          <b-nav>
+            <b-nav-item active>
+              <router-link to="/">Home</router-link></b-nav-item
+            >
+            <b-nav-item>
+              <router-link to="/createNft">Create NFT</router-link></b-nav-item
+            >
+            <b-nav-item>
+              <router-link to="/myNFTs">My NFTs</router-link></b-nav-item
+            >
+          </b-nav>
+        </b-card-header>
+      </b-card>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
